@@ -1,0 +1,17 @@
+meta {
+  name: Create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/{{CORE_V1}}/{{INTERACTION}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "channel":1
+  }
+}
