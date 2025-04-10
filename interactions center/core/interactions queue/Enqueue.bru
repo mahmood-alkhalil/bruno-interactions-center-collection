@@ -1,0 +1,19 @@
+meta {
+  name: Enqueue
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{URL}}/{{CORE_V1}}/{{INTERACTIONS_QUEUE}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "id":"019614cc-6225-7e6c-bef6-629a78c0c642",
+    "queue":"46b64aa8-b534-4e30-a456-3b683bfb1494",
+    "priority":1000000
+  }
+}
