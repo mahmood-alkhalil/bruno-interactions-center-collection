@@ -1,3 +1,25 @@
+headers {
+  Authorization: Bearer {{access_token_set_by_collection_script}}
+}
+
+auth {
+  mode: oauth2
+}
+
+auth:oauth2 {
+  grant_type: client_credentials
+  access_token_url: https://sso.laudatur.one/realms/lab/protocol/openid-connect/token
+  client_id: core-engine
+  client_secret: 2dIpqu5Ll90jtdzlPD6Zm1LZedagFtwN
+  scope: 
+}
+
 vars:pre-request {
   URL: http://localhost:8080
+}
+
+script:post-response {
+  if(req.getAuthMode() == 'oauth2' && res.body.access_token) {
+      bru.setVar('access_token_set_by_collection_script', res.body.access_token);
+  }
 }
