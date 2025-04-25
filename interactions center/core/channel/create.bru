@@ -1,17 +1,17 @@
 meta {
-  name: Create
+  name: create
   type: http
   seq: 1
 }
 
 post {
-  url: {{URL}}/{{CORE_V1}}/{{INTERACTIONS}}
+  url: {{URL}}/{{CORE_V1}}/{{CHANNELS}}
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "channel":1
+    "name":"Video"
   }
 }
