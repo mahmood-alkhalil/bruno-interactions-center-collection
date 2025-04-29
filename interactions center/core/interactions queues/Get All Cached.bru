@@ -1,0 +1,11 @@
+meta {
+  name: Get All Cached
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{URL}}/{{CORE_V1}}/{{INTERACTIONS_QUEUES}}/cached
+  body: none
+  auth: inherit
+}
