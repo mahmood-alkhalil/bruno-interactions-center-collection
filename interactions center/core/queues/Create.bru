@@ -1,0 +1,20 @@
+meta {
+  name: Create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}{{CORE_V1}}{{QUEUES}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name":"sample voice queue ",
+    "channel_id":"7f000101-966c-1bbe-8196-6c9d7bde000d",
+    "logic":1,
+    "capacity":1000
+  }
+}
