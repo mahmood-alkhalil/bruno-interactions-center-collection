@@ -1,12 +1,12 @@
 meta {
-  name: Create
+  name: Find By ID
   type: http
-  seq: 1
+  seq: 3
 }
 
-post {
-  url: {{URL}}{{CORE_V1}}{{QUEUES}}
-  body: json
+get {
+  url: {{URL}}{{CORE_V1}}{{QUEUES}}/7f000101-9671-14f3-8196-71e5de3c0006
+  body: none
   auth: inherit
 }
 
@@ -15,7 +15,6 @@ body:json {
     "name":"sample voice queue ",
     "channel_id":"7f000101-966c-1bbe-8196-6c9d7bde000d",
     "logic":1,
-    "capacity":1000,
-    "active":true
+    "capacity":1000
   }
 }
