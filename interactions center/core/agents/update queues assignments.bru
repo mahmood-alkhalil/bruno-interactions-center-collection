@@ -1,0 +1,25 @@
+meta {
+  name: update queues assignments
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{URL}}{{CORE_V1}}{{AGENTS}}/queues-assignments
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "agent_id": "0196be7a-635d-7ad1-a198-06e5a40598be",
+    "assignments": [
+      {
+        "operation": "update",
+        "queue_id": "01969b3e-a9ca-7881-80b3-0fb2ae46d403",
+        "priority": 20,
+        "enabled":true
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+meta {
+  name: create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}{{CORE_V1}}{{AGENTS}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {}
+}

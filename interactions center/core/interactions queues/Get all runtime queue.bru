@@ -1,0 +1,11 @@
+meta {
+  name: Get all runtime queue
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{URL}}{{CORE_V1}}{{INTERACTIONS_QUEUES}}/runtime
+  body: none
+  auth: inherit
+}

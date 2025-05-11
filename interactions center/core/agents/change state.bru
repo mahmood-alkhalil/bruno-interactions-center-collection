@@ -1,0 +1,18 @@
+meta {
+  name: change state
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{URL}}{{CORE_V1}}{{AGENTS}}/state
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "agent_id": "0196be7a-635d-7ad1-a198-06e5a40598be",
+    "state": 0
+  }
+}

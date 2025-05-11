@@ -1,0 +1,11 @@
+meta {
+  name: get all runtime
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{URL}}{{CORE_V1}}{{INTERACTIONS}}/runtime
+  body: none
+  auth: inherit
+}
