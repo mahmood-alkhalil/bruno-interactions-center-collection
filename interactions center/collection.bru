@@ -7,11 +7,20 @@ auth {
 }
 
 auth:oauth2 {
-  grant_type: client_credentials
+  grant_type: password
   access_token_url: https://sso.laudatur.one/realms/lab/protocol/openid-connect/token
+  refresh_token_url: 
+  username: laudatur
+  password: Hala_1994
   client_id: core-engine
   client_secret: 2dIpqu5Ll90jtdzlPD6Zm1LZedagFtwN
   scope: profile email
+  credentials_placement: body
+  credentials_id: credentials
+  token_placement: header
+  token_header_prefix: Bearer
+  auto_fetch_token: true
+  auto_refresh_token: false
 }
 
 vars:pre-request {
